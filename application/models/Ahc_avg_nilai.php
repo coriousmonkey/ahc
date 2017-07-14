@@ -1,10 +1,7 @@
 <?php
-
     if (!defined('BASEPATH')) exit('No direct script access allowed');
-    
-    class Ahc_avg_nilai extends CI_Model {
 
-        
+    class Ahc_avg_nilai extends CI_Model {
         public $query="";
        
         function __construct() {
@@ -18,7 +15,6 @@
 
         public function Set_data($thn_masuk,$mapel) {
             $this->query="
-
 		select tb_nilai.siswa,tb_siswa.nama_siswa, sum(tb_nilai.nilai) as t_nilai 
                 ,format (avg(tb_nilai.nilai),1 ) as avgg
                 from tb_nilai

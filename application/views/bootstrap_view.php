@@ -50,18 +50,15 @@ $CI=& get_instance();
                         ?>
 					</ul>
                     
-					<ul class="nav navbar-nav navbar-right">
+                                    <ul class="nav navbar-nav navbar-right" style="padding-right: 10px;">
 						<li class="dropdown">
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['user']; ?><strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="<?php echo site_url('User/profile') ?>">Profile</a>
+									<a href="<?php echo site_url('User/profile') ?>">Profile & Password</a>
 								</li>
 								<li>
-									<a href="<?php echo site_url('User/setting') ?>">Setting</a>
-								</li>
-								<li>
-									<a href="<?php echo site_url('User/password') ?>">Password</a>
+									<a href="<?php echo site_url('App_Setting') ?>">Setting</a>
 								</li>
 								<li class="divider">
 								</li>
@@ -92,7 +89,6 @@ $CI=& get_instance();
 		</div>
 	</div>
 </div>
-
     <script src="<?php echo base_url() ?>assets/bootstrap/js/jquery-1.11.1.min.js"></script>
     <script src="<?php echo base_url() ?>assets/bootstrap/js/bootstrap.min.js"></script>
     <?php 

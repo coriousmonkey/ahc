@@ -4,7 +4,7 @@
     class Tampil {
 
         public $title = "myApp";
-        public $instansi= "Nama SD";
+        public $instansi= "SDN Kasiyan 3";
         public $menu=array(
             //Menu => Controller
             'Home'=>'Home',
@@ -21,6 +21,8 @@
 
         public function cetak() {
             $CI = & get_instance();
+            
+            $this->load_setting();
             
             $data = array(
                 'title' => $this->title,
@@ -41,6 +43,13 @@
             $this->content = $content;
             return $this;
         }
-
+        private function load_setting(){
+            $CI= & get_instance();
+            $CI->load->database();
+            $data=$CI->db->get('app_setting',1);
+            
+            $this->title=$data->row_array()['title'];
+            $this->instansi=$data->row_array()['app_name'];
+        }
     }
     
